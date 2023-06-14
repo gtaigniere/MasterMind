@@ -1,0 +1,218 @@
+/********** Debut Fonts **********/
+/* Definitions des polices personnalisees
+Titre du site :
+Titres : , sans-serif
+Paragraphes : , serif
+
+Equivalence de taille des titres (h) avec "font-size" en "em" et en "px"
+h1 => 2em		=> 32px
+h2 => 1.5em		=> 24px
+h3 => 1.17em	=> 19px
+h4 => 1em		=> 16px
+h5 => 0.83em	=> 13.5px
+h6 => 0.67em	=> 10.5px */
+
+/********** Fin Fonts **********/
+/********** Debut Variables **********/
+:root {
+	/***** Couleurs *****/
+	--Noir: #000000; /* Noir */
+	--Rouge: #FF0000; /* Rouge */
+	--Bleu: #0000FF; /* Bleu */
+	--Violet: #9932CC; /* Violet */
+	--fndHeader: #FFF8DC;
+	--fndMain: #EFEFEF; /* Gris très clair */
+	--fndPossibleColors: #D3D3D3; /* Gris clair */
+	--fndFooter: #D8EEE0;
+	--fndInput: #EFEFEF; /* Gris très clair */
+	--fndTxtArea: #EFEFEF; /* Gris très clair */
+}
+/********** Fin Variables **********/
+/********** Reset CSS **********/
+/* Pas besoin si Bootstrap chargé */
+
+/********** Debut General **********/
+h1, h2, h3, h4 {
+	text-align: center;
+}
+p {
+	margin: 0;
+}
+/********** Fin General **********/
+main {
+	display: flex;
+	width: 100%;
+}
+/********** Debut Sections **********/
+/***** Debut Section globale *****/
+section {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+}
+section h1 {
+	margin: 20px 0;
+	font-size: 2.8em;
+}
+section h2 {
+	font-size: 2.2em;
+}
+section h3 {
+	font-size: 1.6em;
+}
+section h4 {
+	font-size: 1.2em;
+}
+section p {
+	margin: 10px 0;
+}
+section div p {
+	margin: auto;
+}
+.combi-line {
+	display: flex;
+	justify-content: space-between;
+	background: saddlebrown;
+	width: auto;
+	height: 65px;
+}
+.combi-tried:nth-child(3) {
+	background: lightblue;
+}
+.well-placed {
+	margin: auto;
+	display: flex;
+	justify-content: flex-end;
+	align-content: space-around;
+	flex-wrap: wrap;
+	width: 120px;
+	height: 40px;
+}
+.well-placed span {
+	margin-right: 10px;
+	display: inline-block;
+	background: black;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	text-align: center;
+}
+.combi-tried {
+	display: flex;
+	justify-content: space-around;
+	width: auto;
+	height: 36px;
+}
+.combi-tried span {
+	margin: 0 14px;
+	display: inline-block;
+	width: 36px;
+	border-radius: 50%;
+	text-align: center;
+}
+.combi-tried span.rouge {
+	background: red;
+}
+.combi-tried span.orange {
+	background: orange;
+}
+.combi-tried span.jaune {
+	background: yellow;
+}
+.combi-tried span.vert {
+	background: green;
+}
+.combi-tried span.bleu {
+	background: blue
+}
+.combi-tried span.violet {
+	background: violet;
+}
+.combi-tried span.noir {
+	background: black;
+}
+.combi-tried span.blanc {
+	background: white;
+}
+.mis-placed {
+	margin: auto;
+	display: flex;
+	justify-content: flex-start;
+	align-content: space-around;
+	flex-wrap: wrap;
+	width: 120px;
+	height: 40px;
+}
+.mis-placed span {
+	margin-left: 10px;
+	display: inline-block;
+	background: white;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	text-align: center;
+}
+section form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+section form div {
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-around;
+}
+section form div label {
+	margin-right: 10px;
+}
+section form button {
+	margin: auto;
+}
+/***** Fin Section globale *****/
+/***** Debut Page Accueil *****/
+#section_accueil form {
+	margin-top: 10px;
+}
+#section_accueil form div {
+	justify-content: space-between;
+	min-width: 200px;
+}
+#section_accueil form div:nth-child(3) input {
+	width: 46px;
+}
+/***** Fin Page Accueil *****/
+/***** Debut Page Play *****/
+#section_play > p:nth-child(4) {
+	margin-bottom: 20px;
+}
+#section_play form {
+	margin-top: 20px;
+}
+#section_play form div {
+	margin: 10px 0 26px;
+}
+#section_play form div select {
+	width: 80px;
+	border: 1px solid var(--fndPossibleColors);
+}
+#section_play form div select:first-child {
+	border-radius: 5px 0 0 5px;
+}
+#section_play form div select:last-child {
+	border-radius: 0 5px 5px 0;
+}
+/***** Fin Page Play *****/
+/********** Fin Sections **********/
+
+/********** Design Responsive **********/
+@media screen and (max-width: 1199px) {
+	/********** Debut Sections **********/
+	section {
+
+	}
+	/********** Fin Sections **********/
+}
