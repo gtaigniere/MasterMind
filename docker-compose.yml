@@ -5,8 +5,6 @@ services:
     image: php7.4-apache
     container_name: php-apache-mastermind
     restart: on-failure
-    depends_on:
-      - db
     build:
       context: .
       dockerfile: Dockerfile
