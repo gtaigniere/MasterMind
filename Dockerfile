@@ -10,8 +10,13 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 # RUN composer --version
 
+# Permet de basculer vers les dépôts d'archive de Debian Bullseye
+RUN echo "deb http://archive.debian.org/debian/ bullseye main" > /etc/apt/sources.list \
+    && echo "deb http://archive.debian.org/debian-security/ bullseye-security main" >> /etc/apt/sources.list
+
 # Paquets nécessaires à l'installation de WordPress/WordPlate + utiles
-RUN apt-get update && apt-get install -y zip unzip vim
+RUN apt-get update -o Acquire::Check-Valid-Until=false \
+    && apt-get install -y -o Acquire::Check-Valid-Until=false zip unzip vim
 
 # Extensions MySQL pour PHP/WordPress
 RUN docker-php-ext-install mysqli pdo pdo_mysql
